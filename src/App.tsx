@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 import { Button, ButtonSize, ButtonType } from './components/Button/Button';
+import { Menu } from './components/Menu/Menu';
+import { MenuItem } from './components/Menu/MenuItem';
 
 function App() {
   return (
@@ -27,6 +29,33 @@ function App() {
         <Button btnType={ButtonType.Link} disabled href='www.baidu.com'>
           disabled Link
         </Button>
+
+        <Menu
+          defaultIndex={0}
+          onSelect={(index) => {
+            console.log(index);
+          }}
+        >
+          <MenuItem index={0}>Menuitem 0</MenuItem>
+          <MenuItem index={1} disabled>
+            Menuitem 1
+          </MenuItem>
+          <MenuItem index={2}>Menuitem 2</MenuItem>
+        </Menu>
+
+        <Menu
+          defaultIndex={0}
+          mode='vertical'
+          onSelect={(index) => {
+            console.log(index);
+          }}
+        >
+          <MenuItem index={0}>Menuitem 0</MenuItem>
+          <MenuItem index={1} disabled>
+            Menuitem 1
+          </MenuItem>
+          <MenuItem index={2}>Menuitem 2</MenuItem>
+        </Menu>
       </div>
     </div>
   );
