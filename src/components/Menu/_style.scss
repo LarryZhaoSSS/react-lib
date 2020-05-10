@@ -35,6 +35,7 @@
     padding-left: 0;
     white-space: nowrap;
     //transition: $menu-transition;
+
     .menu-item {
       padding: $menu-item-padding-y $menu-item-padding-x;
       cursor: pointer;
@@ -47,7 +48,9 @@
     }
   }
   .r-parts-submenu.menu-opened {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .menu-horizontal {
@@ -71,6 +74,9 @@
   border-bottom: 0px;
   margin: 10px 20px;
   border-right: $menu-border-width solid $menu-border-color;
+  .submenu-title {
+    text-align: left;
+  }
   > .menu-item {
     border-left: $menu-item-active-border-width solid transparent;
     &.is-active,

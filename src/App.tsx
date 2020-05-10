@@ -32,7 +32,7 @@ function App() {
         </Button>
 
         <Menu
-          defaultIndex={0}
+          defaultIndex={'0'}
           onSelect={(index) => {
             console.log(index);
           }}
@@ -43,7 +43,7 @@ function App() {
         </Menu>
 
         <Menu
-          defaultIndex={0}
+          defaultIndex={'0'}
           mode='vertical'
           onSelect={(index) => {
             console.log(index);
@@ -56,7 +56,7 @@ function App() {
         <h2>Menu has dropdown</h2>
         <h4>horizon</h4>
         <Menu
-          defaultIndex={0}
+          defaultIndex={'0'}
           onSelect={(index) => {
             console.log(index);
           }}
@@ -70,8 +70,9 @@ function App() {
         </Menu>
         <h4>vertical</h4>
         <Menu
-          defaultIndex={0}
+          defaultIndex={'0'}
           mode='vertical'
+          defaultOpenSubMenus={['2']}
           onSelect={(index) => {
             console.log(index);
           }}
