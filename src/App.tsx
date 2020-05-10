@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { Button, ButtonSize, ButtonType } from './components/Button/Button';
 import { Menu } from './components/Menu/Menu';
 import { MenuItem } from './components/Menu/MenuItem';
 import { SubMenu } from './components/Menu/SubMenu';
+import { Icon } from './components/Icon/Icon';
+library.add(fas);
 
 function App() {
   return (
@@ -84,6 +88,10 @@ function App() {
             <MenuItem>Menuitem 1-1</MenuItem>
           </SubMenu>
         </Menu>
+        <div className='icons'>
+          <Icon icon='coffee' theme='danger' size='10x' />
+          <Icon icon='arrow-right' theme='primary' size='10x' />
+        </div>
       </div>
     </div>
   );

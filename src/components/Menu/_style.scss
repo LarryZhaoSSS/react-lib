@@ -28,14 +28,34 @@
   }
   .submenu-item {
     position: relative;
+    .submenu-title {
+      display: flex;
+      align-items: center;
+    }
+    .arrow-icon {
+      transition: transform 0.25s ease-in-out;
+      margin-left: 0.3em;
+    }
+    &:hover {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .is-vertical {
+    .arrow-icon {
+      transform: rotate(0) !important;
+    }
+  }
+  .is-vertical.is-opened {
+    .arrow-icon {
+      transform: rotate(180deg) !important;
+    }
   }
   .r-parts-submenu {
-    display: none;
     list-style: none;
     padding-left: 0;
     white-space: nowrap;
-    //transition: $menu-transition;
-
     .menu-item {
       padding: $menu-item-padding-y $menu-item-padding-x;
       cursor: pointer;
