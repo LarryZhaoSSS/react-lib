@@ -1,6 +1,5 @@
 import React, { useContext, useState, FunctionComponentElement } from 'react';
 import classNames from 'classnames';
-import { CSSTransition } from 'react-transition-group';
 import { MenuContext } from './Menu';
 import { MenuItemProps } from './MenuItem';
 import { Icon } from '../Icon/Icon';
