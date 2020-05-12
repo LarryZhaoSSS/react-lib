@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { Button, ButtonSize, ButtonType, ButtonProps } from './Button';
+import { Button, ButtonProps } from './Button';
 const defaultProps = {
   onClick: jest.fn(),
 };
 const testProps: ButtonProps = {
-  btnType: ButtonType.Primary,
-  size: ButtonSize.Large,
+  btnType: 'primary',
+  size: 'lg',
   className: 'klass',
 };
 const disabledProps: ButtonProps = {
@@ -33,7 +33,7 @@ describe('test button component', () => {
   });
   it('should render a link button', () => {
     const wrapper = render(
-      <Button btnType={ButtonType.Link} href='https://qq.com'>
+      <Button btnType={'link'} href='https://qq.com'>
         link
       </Button>
     );
