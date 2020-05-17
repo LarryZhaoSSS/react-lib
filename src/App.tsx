@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { Button, ButtonSize, ButtonType } from './components/Button/Button';
+import { Button } from './components/Button/Button';
 import { Menu } from './components/Menu/Menu';
 import { MenuItem } from './components/Menu/MenuItem';
 import { SubMenu } from './components/Menu/SubMenu';
@@ -14,24 +14,20 @@ function App() {
     <div className='App'>
       <div className='content'>
         <Button className={'customer'}>button</Button>
-        <Button btnType={ButtonType.Primary}>primary</Button>
-        <Button btnType={ButtonType.Default}>default</Button>
-        <Button btnType={ButtonType.Danger}>danger</Button>
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+        <Button btnType={'primary'}>primary</Button>
+        <Button btnType={'default'}>default</Button>
+        <Button btnType={'danger'}>danger</Button>
+        <Button btnType={'primary'} size={'lg'}>
           Large
         </Button>
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
+        <Button btnType={'primary'} size={'sm'}>
           small
         </Button>
         <Button disabled>disabled</Button>
-        <Button
-          btnType={ButtonType.Link}
-          href='http://www.baidu.com'
-          target='_blank'
-        >
+        <Button btnType={'link'} href='http://www.baidu.com' target='_blank'>
           Link
         </Button>
-        <Button btnType={ButtonType.Link} disabled href='www.baidu.com'>
+        <Button btnType={'link'} disabled href='www.baidu.com'>
           disabled Link
         </Button>
 
