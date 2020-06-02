@@ -7,8 +7,8 @@ import { Menu } from './components/Menu/Menu';
 import { MenuItem } from './components/Menu/MenuItem';
 import { SubMenu } from './components/Menu/SubMenu';
 import { Icon } from './components/Icon/Icon';
-library.add(fas);
 
+library.add(fas);
 function App() {
   return (
     <div className='App'>
